@@ -1,0 +1,11 @@
+<project name="antproject" default="package">
+<target name="init">
+<mkdir dir="web"/>
+</target>
+<target name="compile" depends="init">
+<javac srcdir="src" destdir="web"/>
+</target>
+<target name="package" depends="compile">
+<jar basedir="web" destfile="test.jar"/>
+</target>
+</project>
